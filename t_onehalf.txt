@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$t=1;
+$Sum="";
+do{
+	$a=3*$t;
+	$c=1/$a;
+	$Sum=$Sum+$c;
+
+$t++;
+}while($Sum<0.5);
+echo "Here we approach ".$Sum.".";
+?>
+</body>
+</html>
