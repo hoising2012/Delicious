@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+</style>
+</head>
+<body>
+<?php
+$Arr=array(1,2,3,4,5,6);
+echo "<table>";
+for($i=0; $i<=5; $i++){
+	$X=0;
+	for($j=0; $j<=5; $j++){
+    	if($Arr[$i]!=$Arr[$j]){
+		$X=average($Arr[$i], $Arr[$j]);
+        }
+        for($k=0; $k<=5; $k++){
+			if($X==$Arr[$k]){
+                echo "<tr>";
+            	echo "<td>$X</td>";
+                echo "<td>$Arr[$i]</td>";
+            	echo "<td>$Arr[$j]</td>";
+                echo "</tr>";
+            }
+		}
+	}
+}
+echo "<table>";
+function average($a, $b){
+	$ave=($a+$b)/2;
+	return $ave;
+}
+?>
+</body>
+</html>
