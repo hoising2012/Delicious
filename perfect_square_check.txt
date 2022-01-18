@@ -3,20 +3,11 @@
 <body>
 <?php
 for($i=0; $i<=9; $i++){
-	$ps=perfect_square($i);
-	if($ps==0){
+	$ps=gmp_perfect_square($i);
+	if($ps==1){
     	echo $i." is a perfect square.";
         echo "<br \>";
     }
-}
-function perfect_square($n){
-	$m=sqrt($n);
-    $s=is_decimal($m);
-    return $s;
-}
-function is_decimal( $val )
-{
-    return is_numeric( $val ) && floor( $val ) != $val;
 }
 ?>
 </body>
