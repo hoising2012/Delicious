@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$A=nCr(11,5);
+$B=floor(11/5);
+echo "Suppose A is defined as nCr(11,5), then A is equal to ".$A.".";
+echo "<br \>";
+echo "Then A modulus 5 is equal to ".($A%5).".";
+echo "<br \>";
+echo "Let B equal to the floor function of 11/5, then B is equal to ";
+echo $B.".";
+echo "<br \>";
+echo "Hence, A modulus 5 is equal to B.";
+echo "<br \>";
+echo "In Conclusion, nCp equal to floor of n/p modulus p where p is an odd prime.";
+function factorial(int $n){
+ $t=0;
+    if($n!=0){
+     for($i=1; $i<=$n; $i++){
+     if($i==1){
+         $t=$i;
+         }else{
+         $t=$t*$i;
+         }
+     }
+    }else{
+     $t=1;
+    }
+ return $t;
+}
+function nCr(int $n, int $m){
+ $a=factorial($n);
+        $b=factorial($m);
+        $c=$n-$m;
+        $c=factorial($c);
+        $t=$a/($b*$c);
+ return $t;
+}
+?>
+</body>
+</html>
