@@ -28,19 +28,19 @@ function fillcircle(canvas, event) {
     var s = document.getElementById("ball");
     var color = s.value;
     console.log("x: " + x + " y: " + y)
-    if( x>=50 && x<=150 && y>=50 && y<=150 ){
+    if( x>=50 && x<=150 && y>=25 && y<=125 ){
     ctx.beginPath();
 	ctx.arc(100, 75, 50, 0, 2 * Math.PI);
 	ctx.stroke();
     ctx.fillStyle = color;
 	ctx.fill();
-    }else if( x>=150 && x<=250 && y>=50 && y<=150 ){
+    }else if( x>=150 && x<=250 && y>=25 && y<=125 ){
     ctx.beginPath();
     ctx.arc(200, 75, 50, 0, 2 * Math.PI);
     ctx.stroke();
     ctx.fillStyle = color;
 	ctx.fill();
-    }else if( x>=250 && x<=350 && y>=50 && y<=150 ){
+    }else if( x>=250 && x<=350 && y>=25 && y<=125 ){
     ctx.beginPath();
     ctx.arc(300, 75, 50, 0, 2 * Math.PI);
 	ctx.stroke();
