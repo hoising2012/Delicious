@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="myCanvas" width="400" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+<select name="color" id="ball">
+    <option value="red">red</option>
+    <option value="blue">blue</option>
+    <option value="green">green</option>
+    <option value="yellow">yellow</option>
+  </select>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.beginPath();
+ctx.arc(200, 75, 50, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.beginPath();
+ctx.arc(300, 75, 50, 0, 2 * Math.PI);
+ctx.stroke();
+function fillcircle(canvas, event) {
+    const rect = canvas.getBoundingClientRect()
+    const x = event.clientX - rect.left
+    const y = event.clientY - rect.top
+    var s = document.getElementById("ball");
+    var color = s.value;
+    console.log("x: " + x + " y: " + y)
+    if( x>=50 && x<=150 && y>=50 && y<=150 ){
+    ctx.beginPath();
+	ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+	ctx.stroke();
+    ctx.fillStyle = color;
+	ctx.fill();
+    }else if( x>=150 && x<=250 && y>=50 && y<=150 ){
+    ctx.beginPath();
+    ctx.arc(200, 75, 50, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.fillStyle = color;
+	ctx.fill();
+    }else if( x>=250 && x<=350 && y>=50 && y<=150 ){
+    ctx.beginPath();
+    ctx.arc(300, 75, 50, 0, 2 * Math.PI);
+	ctx.stroke();
+    ctx.fillStyle = color;
+	ctx.fill();
+    }
+}
+c.addEventListener('click', function(e) {
+     fillcircle(c, e);
+	
+})
+</script> 
+</body>
+</html>
