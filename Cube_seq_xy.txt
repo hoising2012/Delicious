@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$Arr_y=array(1,2);
+$Arr_x=array(1,3);
+$Sum_y=array();
+$Sum_x=array();
+for($i=1; $i<=2; $i++){
+		$k=3*$i;     
+    for($j=0; $j<=1; $j++){
+        $Sum_y[$j]=$Arr_y[$j]+$k; 
+        array_push($Arr_y,$Sum_y[$j]);
+	}
+}
+for($i=1; $i<=5; $i++){
+	if($i%2 == 1){
+        	$t=2;
+            array_push($Arr_x,$t);
+        }else{
+        	$t=3*$i;
+            $Sum_x=$Arr_x[1]+$t;
+            array_push($Arr_x,$Sum_x);
+        }    
+}
+print_r($Arr_x);
+echo "<br \>";
+print_r($Arr_y);
+?>
+</body>
+</html>
