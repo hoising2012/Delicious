@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+</style>
+</head>
+<body>
+<?php
+$Sum="";
+$Sum_1="";
+echo "<table>";
+echo "<tr>";
+echo "<th>n</th>";
+echo "<th>Series 1</th>";
+echo "<th>Series 2</th>";
+echo "</tr>";
+for($n=1; $n<=45; $n++){
+	$N=1/$n;
+    $Ns=1/pow($n,2);
+	$Sum=$Sum+$N;
+    $Sum_1=$Sum_1+$Ns;
+    $Sum=round($Sum,3);
+    $Sum_1=round($Sum_1,3);
+	echo "<tr>";
+    echo "<td>$n</td>";
+    echo "<td>$Sum</td>";
+    echo "<td>$Sum_1</td>";
+    echo "</tr>";
+}
+echo "</table>";
+echo "When n reaches 45, series 1 diverges and series 2 converges.";
+?>
+</body>
+</html>
