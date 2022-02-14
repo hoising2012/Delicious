@@ -7,15 +7,15 @@ Your browser does not support the HTML5 canvas tag.</canvas>
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.moveTo(20, 100);
-ctx.bezierCurveTo(20, 20, 200, 20, 200, 100);
+ctx.moveTo(60, 35);
+ctx.bezierCurveTo(60, 115, 240, 115, 240, 35);
 ctx.stroke();
 ctx.beginPath();
-ctx.moveTo(20, 20);
-ctx.bezierCurveTo(20, 100, 200, 100, 200, 20);
+ctx.moveTo(60, 115);
+ctx.bezierCurveTo(60, 35, 240, 35, 240, 115);
 ctx.stroke();
 ctx.beginPath();
-ctx.arc(110, 60, 20, 0, 2 * Math.PI);
+ctx.arc(150, 75, 20, 0, 2 * Math.PI);
 ctx.stroke();
 </script> 
 </body>
