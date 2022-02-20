@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$P=array(1,-2);
+$Q=array();
+$A=array();
+for($i=0; $i<=1; $i++){
+	$j=1-$i;
+    $Q[$j]=(-1)*$P[$i];	
+}
+for($i=0; $i<=1; $i++){
+	$F=7*$P[$i]+2;
+    $B=$P[$i]+$Q[$i];
+    $A[$i]=$F/$B;
+}
+print_r($A);
+?>
+</body>
+</html>
