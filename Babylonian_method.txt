@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$x   = NULL;  
+$S   = 125348;
+$num = $S/2; 
+$m = 1;
+while(true) {
+    $m *= 10;
+    if ($m > $num)
+        break;
+}
+$m /= 10;
+$x = (int) floor($num / $m);
+$A = count_digit($S);
+$A /= 2;
+$n=1;
+$str="";
+while($n<=$A){
+	if($n==1){
+    $str.=$n;
+    }else{
+    $str.=0;
+    }
+$n++;
+}
+$x_0=$x*(int)$str;
+$x_0=round($x_0,3);
+$y="";
+do{
+	$y=(1/2)*($x_0+($S/$x_0));
+    $y=round($y,3);
+	$diff=$y-$x_0;
+    $x_0=$y;
+}while($diff!=0);
+
+echo "Therefore, √125348 ≈ ".$y.".";
+
+function count_digit($number) {
+  return strlen($number);
+}
+?>
+</body>
+</html>
