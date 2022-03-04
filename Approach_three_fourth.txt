@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$i=1;
+$Sum="";
+while($Sum<0.749){
+	$I=1/($i*($i+2));
+    $Sum=$Sum+$I;
+	$i++;
+}
+$Sum=round($Sum,2);
+echo "The series converges at ".$Sum.".";
+?>
+</body>
+</html>
