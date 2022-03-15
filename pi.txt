@@ -3,24 +3,24 @@
 <body>
 <?php
 $n=0;
-$Sum=1;
+$product=1;
 do{
     if($n==0){	
-        $Sum=$Sum*2;
+        $product=$product*2;
     }else if($n==1){
 	$p=sqrt(2);
     $Q=2/$p;
-    $Sum=$Sum*$Q;
+    $product=$product*$Q;
 	}else{ 
     	$p=2+$p;
         $p=sqrt($p);
         $Q=2/$p;
-        $Sum=$Sum*$Q;
+        $product=$product*$Q;
            }		
 $n++;
-}while($Sum<3.14);
-$Sum=round($Sum,2);
-echo "The number π is approximately equal to ".$Sum.".";
+}while($product<3.14);
+$product=round($product,2);
+echo "The number π is approximately equal to ".$product.".";
 ?>
 </body>
 </html>
