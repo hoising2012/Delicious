@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$n=0;
+$Sum=1;
+do{
+    if($n==0){	
+        $Sum=$Sum*2;
+    }else if($n==1){
+	$p=sqrt(2);
+    $Q=2/$p;
+    $Sum=$Sum*$Q;
+	}else{ 
+    	$p=2+$p;
+        $p=sqrt($p);
+        $Q=2/$p;
+        $Sum=$Sum*$Q;
+           }		
+$n++;
+}while($Sum<3.14);
+$Sum=round($Sum,2);
+echo "The number π is approximately equal to ".$Sum.".";
+?>
+</body>
+</html>
