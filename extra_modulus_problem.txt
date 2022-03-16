@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+</style>
+</head>
+<body>
+<?php
+$V=7;
+$F=array();
+function primeDivisors($n) {
+  echo "Prime Divisors of $n are: ";
+  $count=0;
+  $Arr=array();
+  for($i = 1; $i <= $n; $i++) {
+    if($n%$i == 0){
+      //echo "$i ";
+      $A=primeCheck($i);
+      if($A==1){
+      $Arr[$count] = $i;
+      echo $i;
+      echo "\n";
+      $count++;
+      	}
+      }
+  }
+  return $Arr;
+}
+function primeCheck($number){
+    if ($number == 1)
+    return 0;
+    for ($i = 2; $i <= $number/2; $i++){
+        if ($number % $i == 0)
+            return 0;
+    }
+    return 1;
+}
+$prime_factor=primeDivisors(42);
+echo "<table>";
+echo "<tr>";
+echo "<th>Prime factors</th>";
+echo "<th>modulus</th>";
+echo "<th>0/1</th>";
+echo "</tr>";
+for($i=0; $i<=sizeof($prime_factor)-1; $i++){
+	$X=$V%$prime_factor[$i];
+    echo "<tr>";
+    echo "<td>$prime_factor[$i]</td>";
+    echo "<td>$X</td>";
+    if(($X==1)||($X==0)){
+    echo "<td>*</td>";
+    }
+	echo "</tr>";
+}
+?>
+</body>
+</html>
